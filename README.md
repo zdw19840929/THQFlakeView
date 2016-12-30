@@ -53,5 +53,70 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 }
 ````
 
+### API
+
+初始化方法：
+
+```
+- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images;
+- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate;
+```
+
+雪花参数基本配置参数：
+
+````
+// 动画图片数组
+@property (nonatomic, copy) NSArray<UIImage *> *images;
+
+// 每个image对应的速度，为空则使用默认的velocity属性值
+@property (nonatomic, copy) NSArray *velocityArray;
+
+// 是否在动画中
+@property (nonatomic, getter=isAnimating) BOOL animating;
+
+// 持续时间
+@property (nonatomic, assign) CGFloat lastTime;
+
+// 速度，当velocityArray为空时使用这个
+@property (nonatomic, assign) CGFloat velocity;
+
+// 每秒产生个数
+@property (nonatomic, assign) float birthRate;
+
+// 缩放比例，默认为1不缩放
+@property (nonatomic, assign) CGFloat scale;
+
+// 缩放比例范围，实际大小为（scale - scaleRange，scale + scaleRange）
+@property (nonatomic, assign) CGFloat scaleRange;
+
+// 横向加速度
+@property (nonatomic, assign) CGFloat yAcceleration;
+````
+
+开始接触函数：
+
+```
+// 初始开始
+- (void)animationStart;
+// 手动结束
+- (void)animationStop;
+```
+
+展示隐藏函数：
+
+```
+// 切换到别的页面隐藏
+- (void)hideFlakeView;
+// 切换回来重新显示
+- (void)showFlakeView;
+```
+
+保存雪花飘落的场景控制器指针，以保证home出去再回来时正常显示：
+
+```
+// 特定的下雪花的控制器，CLNNFlakeView不一定是加在这个控制器上的，也有可能是加在UINavigationController上
+@property (nonatomic, weak) UIViewController *viewController;
+```
+
 
 
