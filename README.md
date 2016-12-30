@@ -10,6 +10,12 @@
 
 FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./FlakeView/FlakeView踩过的坑.md)
 
+效果图:
+
+![切换tab](./FlakeView/切换tab.gif)
+
+![home回来](./FlakeView/home回来.gif)
+
 ### 使用
 
 #### 初始化与配置
