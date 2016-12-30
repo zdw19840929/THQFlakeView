@@ -37,7 +37,6 @@ static const int NotUseTabBarController = 100;
 
 #pragma mark Private
 - (CLNNFlakeStaticImageView *)flakeStaticImageView {
-    
     CLNNFlakeStaticImageView *flakeStaticImageView = [[CLNNFlakeStaticImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
     for (UIView *view in self.subviews) {
         if ([view isKindOfClass:[CLNNFlakeStaticImageView class]]) {
@@ -180,10 +179,8 @@ static const int NotUseTabBarController = 100;
 - (void)hideFlakeView {
     if (self.superview) {
         self.hidden = YES;
-        if (self.inWhichTabIndex != NotUseTabBarController) {
-            if (self.inWhichTabIndex != [self tabBarControllerSelectedIndex]) {
-                self.shouldOverspread = YES;
-            }
+        if (self.inWhichTabIndex != NotUseTabBarController && self.inWhichTabIndex != [self tabBarControllerSelectedIndex]) {
+            self.shouldOverspread = YES;
         }
     }
 }
