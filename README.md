@@ -35,6 +35,8 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 
 关于self.snowView.viewController = self;的说明，需要需要在特定的控制器里才出现雪花，DEMO里是ViewController,但是需要雪花从导航栏顶部开始飘落（实际使用中配合换肤效果不会像DEMO这么挫），所以把snowView加在self.navigationController.view上（可以根据实际需求加在UIViewController或者UITabBarController的视图上），此时home出去再回来的时候需要判断ViewController是否是正在显示的从而决定是否铺满雪花，如果ViewController正在显示就铺满雪花，如果没有正在显示就不做动作。但是snowView是加在导航控制器的视图上的，在snowView内部无法获取需要显示的场景控制器（ViewController）的指针，也就是不知道此时自己是否应该显示。因此self.snowView.viewController = self;让snowView知道自己显示的场景控制器。snowView对viewController是弱引用的不会导致内存泄漏。
 
+#### 额外处理
+
 为了解决切换tab再回来重新飘落的问题在需要雪花的场景控制器里添加如下代码：
 
 ````
@@ -55,14 +57,14 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 
 ### API
 
-初始化方法：
+* 初始化方法：
 
 ```
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images;
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate;
 ```
 
-雪花参数基本配置参数：
+* 雪花参数基本配置参数：
 
 ````
 // 动画图片数组
@@ -93,7 +95,7 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 @property (nonatomic, assign) CGFloat yAcceleration;
 ````
 
-开始接触函数：
+* 开始接触函数：
 
 ```
 // 初始开始
@@ -102,7 +104,7 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 - (void)animationStop;
 ```
 
-展示隐藏函数：
+* 展示隐藏函数：
 
 ```
 // 切换到别的页面隐藏
@@ -111,7 +113,7 @@ FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./Fla
 - (void)showFlakeView;
 ```
 
-保存雪花飘落的场景控制器指针，以保证home出去再回来时正常显示：
+* 保存雪花飘落的场景控制器指针，以保证home出去再回来时正常显示：
 
 ```
 // 特定的下雪花的控制器，CLNNFlakeView不一定是加在这个控制器上的，也有可能是加在UINavigationController上
