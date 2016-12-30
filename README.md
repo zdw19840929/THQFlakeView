@@ -8,7 +8,7 @@
 * 实现顶部飘落效果后导致飘花数量偏差太大   
 * 实现从顶部飘落后效果后切换底部tab或者home出去再回来会从新飘落。
 
-FlakeView针对这几个坑，做了封装。详见[FlakeView踩过的坑](./FlakeView/FlakeView踩过的坑.md)
+FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[FlakeView踩过的坑](./FlakeView/FlakeView踩过的坑.md)
 
 效果图:
 
