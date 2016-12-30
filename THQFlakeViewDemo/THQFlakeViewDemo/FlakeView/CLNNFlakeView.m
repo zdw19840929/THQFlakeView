@@ -27,6 +27,14 @@ static const int NotUseTabBarController = 100;
 
 @implementation CLNNFlakeView
 
+- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate {
+    self = [super initWithFrame:frame images:images lastTime:seconds velocity:velocity birthRate:rate];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    }
+    return self;
+}
+
 #pragma mark Private
 - (CLNNFlakeStaticImageView *)flakeStaticImageView {
     
@@ -109,15 +117,6 @@ static const int NotUseTabBarController = 100;
             [self showFlakeView];
         }
         self.shouldOverspread = YES;
-    }
-}
-
-#pragma mark Access
-- (void)setAppWillEnterForegroundNotification:(NSString *)appWillEnterForegroundNotification {
-    if (appWillEnterForegroundNotification && ![appWillEnterForegroundNotification isEqualToString:_appWillEnterForegroundNotification]) {
-        _appWillEnterForegroundNotification = appWillEnterForegroundNotification;
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground) name:self.appWillEnterForegroundNotification object:nil];
     }
 }
 

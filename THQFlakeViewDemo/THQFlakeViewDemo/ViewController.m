@@ -49,7 +49,6 @@
         NSArray *images = @[image];
         self.snowView = [[CLNNFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
         self.snowView.viewController = self;
-        self.snowView.appWillEnterForegroundNotification = @"applicationWillEnterForeground";
         [self.navigationController.view addSubview:self.snowView];
         self.snowView.scale = 0.2;
         self.snowView.scaleRange = 0.2;

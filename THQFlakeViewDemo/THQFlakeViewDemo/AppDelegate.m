@@ -51,7 +51,7 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillEnterForeground" object:nil];
+
 }
 
 

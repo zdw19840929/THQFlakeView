@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CLNNFlakeImageView.h"
+
+static const NSString *appWillEnterForegroundNotification = @"AppWillEnterForegroundNotification";
+
 @interface CLNNFlakeView : CLNNFlakeImageView
 
 // 特定的下雪花的控制器，CLNNFlakeView不一定是加在这个控制器上的，也有可能是加在UINavigationController上
 @property (nonatomic, weak) UIViewController *viewController;
-
-// 发送home出去再回来的通知NAME
-@property (nonatomic, copy) NSString *appWillEnterForegroundNotification;
 
 @end
