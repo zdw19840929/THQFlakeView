@@ -228,12 +228,4 @@ self.birthRate为每秒产生雪花个数，这样实际数目不会有太大差
 }
 ````
 
-AppDelegate里添加代码：
-
-```
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillEnterForeground" object:nil];
-}
-```
-
-都是为了再适当的时候触发showFlakeView方法，以使雪花占满整个屏幕
+以便在适当的时候触发showFlakeView方法，以使雪花占满整个屏幕
