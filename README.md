@@ -12,7 +12,7 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 
 效果图:
 
-![切换tab](./resource/切换tab.gif)
+![切换tab](../ImageResource/THQFlakeView_resource/切换tab.gif)
 
 ![home回来](./resource/home回来.gif)
 
