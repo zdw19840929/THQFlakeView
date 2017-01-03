@@ -13,13 +13,13 @@
 		9C43570B1E1518AB0064D15E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4357091E1518AB0064D15E /* Main.storyboard */; };
 		9C43570D1E1518AB0064D15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C43570C1E1518AB0064D15E /* Assets.xcassets */; };
 		9C4357101E1518AB0064D15E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C43570E1E1518AB0064D15E /* LaunchScreen.storyboard */; };
-		9C4357311E1519220064D15E /* THQFlakeGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4357281E1519220064D15E /* THQFlakeGifImageView.m */; };
-		9C4357321E1519220064D15E /* THQFlakeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C43572A1E1519220064D15E /* THQFlakeImageView.m */; };
-		9C4357331E1519220064D15E /* THQFlakeStaticImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C43572C1E1519220064D15E /* THQFlakeStaticImageView.m */; };
-		9C4357341E1519220064D15E /* THQFlakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C43572E1E1519220064D15E /* THQFlakeView.m */; };
-		9C4357351E1519220064D15E /* NSTimer+THQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4357301E1519220064D15E /* NSTimer+THQCategory.m */; };
 		9C4357381E1519520064D15E /* snow_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C4357361E1519520064D15E /* snow_background.jpg */; };
 		9C4357391E1519520064D15E /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4357371E1519520064D15E /* snow.png */; };
+		9C8C04BD1E1BAFE5000557A2 /* NSTimer+THQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C04B41E1BAFE5000557A2 /* NSTimer+THQCategory.m */; };
+		9C8C04BE1E1BAFE5000557A2 /* THQFlakeGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C04B61E1BAFE5000557A2 /* THQFlakeGifImageView.m */; };
+		9C8C04BF1E1BAFE5000557A2 /* THQFlakeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C04B81E1BAFE5000557A2 /* THQFlakeImageView.m */; };
+		9C8C04C01E1BAFE5000557A2 /* THQFlakeStaticImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C04BA1E1BAFE5000557A2 /* THQFlakeStaticImageView.m */; };
+		9C8C04C11E1BAFE5000557A2 /* THQFlakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C04BC1E1BAFE5000557A2 /* THQFlakeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,18 +33,18 @@
 		9C43570C1E1518AB0064D15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C43570F1E1518AB0064D15E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C4357111E1518AB0064D15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C4357271E1519220064D15E /* THQFlakeGifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeGifImageView.h; path = FlakeView/THQFlakeGifImageView.h; sourceTree = "<group>"; };
-		9C4357281E1519220064D15E /* THQFlakeGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeGifImageView.m; path = FlakeView/THQFlakeGifImageView.m; sourceTree = "<group>"; };
-		9C4357291E1519220064D15E /* THQFlakeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeImageView.h; path = FlakeView/THQFlakeImageView.h; sourceTree = "<group>"; };
-		9C43572A1E1519220064D15E /* THQFlakeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeImageView.m; path = FlakeView/THQFlakeImageView.m; sourceTree = "<group>"; };
-		9C43572B1E1519220064D15E /* THQFlakeStaticImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeStaticImageView.h; path = FlakeView/THQFlakeStaticImageView.h; sourceTree = "<group>"; };
-		9C43572C1E1519220064D15E /* THQFlakeStaticImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeStaticImageView.m; path = FlakeView/THQFlakeStaticImageView.m; sourceTree = "<group>"; };
-		9C43572D1E1519220064D15E /* THQFlakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeView.h; path = FlakeView/THQFlakeView.h; sourceTree = "<group>"; };
-		9C43572E1E1519220064D15E /* THQFlakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeView.m; path = FlakeView/THQFlakeView.m; sourceTree = "<group>"; };
-		9C43572F1E1519220064D15E /* NSTimer+THQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+THQCategory.h"; path = "FlakeView/NSTimer+THQCategory.h"; sourceTree = "<group>"; };
-		9C4357301E1519220064D15E /* NSTimer+THQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+THQCategory.m"; path = "FlakeView/NSTimer+THQCategory.m"; sourceTree = "<group>"; };
 		9C4357361E1519520064D15E /* snow_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow_background.jpg; sourceTree = "<group>"; };
 		9C4357371E1519520064D15E /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		9C8C04B31E1BAFE5000557A2 /* NSTimer+THQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+THQCategory.h"; path = "THQFlakeView/NSTimer+THQCategory.h"; sourceTree = "<group>"; };
+		9C8C04B41E1BAFE5000557A2 /* NSTimer+THQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+THQCategory.m"; path = "THQFlakeView/NSTimer+THQCategory.m"; sourceTree = "<group>"; };
+		9C8C04B51E1BAFE5000557A2 /* THQFlakeGifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeGifImageView.h; path = THQFlakeView/THQFlakeGifImageView.h; sourceTree = "<group>"; };
+		9C8C04B61E1BAFE5000557A2 /* THQFlakeGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeGifImageView.m; path = THQFlakeView/THQFlakeGifImageView.m; sourceTree = "<group>"; };
+		9C8C04B71E1BAFE5000557A2 /* THQFlakeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeImageView.h; path = THQFlakeView/THQFlakeImageView.h; sourceTree = "<group>"; };
+		9C8C04B81E1BAFE5000557A2 /* THQFlakeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeImageView.m; path = THQFlakeView/THQFlakeImageView.m; sourceTree = "<group>"; };
+		9C8C04B91E1BAFE5000557A2 /* THQFlakeStaticImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeStaticImageView.h; path = THQFlakeView/THQFlakeStaticImageView.h; sourceTree = "<group>"; };
+		9C8C04BA1E1BAFE5000557A2 /* THQFlakeStaticImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeStaticImageView.m; path = THQFlakeView/THQFlakeStaticImageView.m; sourceTree = "<group>"; };
+		9C8C04BB1E1BAFE5000557A2 /* THQFlakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THQFlakeView.h; path = THQFlakeView/THQFlakeView.h; sourceTree = "<group>"; };
+		9C8C04BC1E1BAFE5000557A2 /* THQFlakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THQFlakeView.m; path = THQFlakeView/THQFlakeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 		9C4356FF1E1518AB0064D15E /* THQFlakeViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9C4357171E1518CD0064D15E /* FlakeView */,
+				9C4357171E1518CD0064D15E /* THQFlakeView */,
 				9C4357031E1518AB0064D15E /* AppDelegate.h */,
 				9C4357041E1518AB0064D15E /* AppDelegate.m */,
 				9C4357061E1518AB0064D15E /* ViewController.h */,
@@ -101,21 +101,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9C4357171E1518CD0064D15E /* FlakeView */ = {
+		9C4357171E1518CD0064D15E /* THQFlakeView */ = {
 			isa = PBXGroup;
 			children = (
-				9C4357271E1519220064D15E /* THQFlakeGifImageView.h */,
-				9C4357281E1519220064D15E /* THQFlakeGifImageView.m */,
-				9C4357291E1519220064D15E /* THQFlakeImageView.h */,
-				9C43572A1E1519220064D15E /* THQFlakeImageView.m */,
-				9C43572B1E1519220064D15E /* THQFlakeStaticImageView.h */,
-				9C43572C1E1519220064D15E /* THQFlakeStaticImageView.m */,
-				9C43572D1E1519220064D15E /* THQFlakeView.h */,
-				9C43572E1E1519220064D15E /* THQFlakeView.m */,
-				9C43572F1E1519220064D15E /* NSTimer+THQCategory.h */,
-				9C4357301E1519220064D15E /* NSTimer+THQCategory.m */,
+				9C8C04B31E1BAFE5000557A2 /* NSTimer+THQCategory.h */,
+				9C8C04B41E1BAFE5000557A2 /* NSTimer+THQCategory.m */,
+				9C8C04B51E1BAFE5000557A2 /* THQFlakeGifImageView.h */,
+				9C8C04B61E1BAFE5000557A2 /* THQFlakeGifImageView.m */,
+				9C8C04B71E1BAFE5000557A2 /* THQFlakeImageView.h */,
+				9C8C04B81E1BAFE5000557A2 /* THQFlakeImageView.m */,
+				9C8C04B91E1BAFE5000557A2 /* THQFlakeStaticImageView.h */,
+				9C8C04BA1E1BAFE5000557A2 /* THQFlakeStaticImageView.m */,
+				9C8C04BB1E1BAFE5000557A2 /* THQFlakeView.h */,
+				9C8C04BC1E1BAFE5000557A2 /* THQFlakeView.m */,
 			);
-			name = FlakeView;
+			name = THQFlakeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,14 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4357311E1519220064D15E /* THQFlakeGifImageView.m in Sources */,
+				9C8C04BE1E1BAFE5000557A2 /* THQFlakeGifImageView.m in Sources */,
+				9C8C04BD1E1BAFE5000557A2 /* NSTimer+THQCategory.m in Sources */,
+				9C8C04BF1E1BAFE5000557A2 /* THQFlakeImageView.m in Sources */,
 				9C4357081E1518AB0064D15E /* ViewController.m in Sources */,
-				9C4357321E1519220064D15E /* THQFlakeImageView.m in Sources */,
+				9C8C04C11E1BAFE5000557A2 /* THQFlakeView.m in Sources */,
 				9C4357051E1518AB0064D15E /* AppDelegate.m in Sources */,
-				9C4357341E1519220064D15E /* THQFlakeView.m in Sources */,
 				9C4357021E1518AB0064D15E /* main.m in Sources */,
-				9C4357331E1519220064D15E /* THQFlakeStaticImageView.m in Sources */,
-				9C4357351E1519220064D15E /* NSTimer+THQCategory.m in Sources */,
+				9C8C04C01E1BAFE5000557A2 /* THQFlakeStaticImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
