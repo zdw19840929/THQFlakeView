@@ -26,16 +26,16 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 @end
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIImage *image = [UIImage imageNamed:@"snow"];
-    NSArray *images = @[image];
-    self.snowView = [[CLNNFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
-    self.snowView.viewController = self;
-    [self.navigationController.view addSubview:self.snowView];
-    self.snowView.scale = 0.2;
-    self.snowView.scaleRange = 0.2;
-    self.snowView.yAcceleration = 100;
-    self.snowView.velocityArray = @[@50];
-    [self.snowView animationStart];
+        UIImage *image = [UIImage imageNamed:@"snow"];
+        NSArray *images = @[image];
+        self.flakeView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
+        self.flakeView.viewController = self;
+        [self.navigationController.view addSubview:self.flakeView];
+        self.flakeView.scale = 0.2;
+        self.flakeView.scaleRange = 0.2;
+        self.flakeView.yAcceleration = 100;
+        self.flakeView.velocityArray = @[@50];
+        [self.flakeView animationStart];
 }
 ````
 
@@ -48,15 +48,15 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 ````
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (self.snowView) {
-        [self.snowView showFlakeView];
+    if (self.flakeView) {
+        [self.flakeView showFlakeView];
     }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    if (self.snowView) {
-        [self.snowView hideFlakeView];
+    if (self.flakeView) {
+        [self.flakeView hideFlakeView];
     }
 }
 ````

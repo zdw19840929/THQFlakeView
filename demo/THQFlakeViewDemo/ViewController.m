@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 @property (nonatomic,strong) UIImageView *backgroundImgView;
-@property (nonatomic, strong) THQFlakeView *snowView;
+@property (nonatomic, strong) THQFlakeView *flakeView;
 @end
 
 @implementation ViewController
@@ -25,36 +25,36 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (self.snowView) {
-        [self.snowView showFlakeView];
+    if (self.flakeView) {
+        [self.flakeView showFlakeView];
     }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    if (self.snowView) {
-        [self.snowView hideFlakeView];
+    if (self.flakeView) {
+        [self.flakeView hideFlakeView];
     }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"点击");
     
-    if (self.snowView.isAnimating) {
+    if (self.flakeView.isAnimating) {
         UIViewController *vc = [[UIViewController alloc] init];
         vc.view.backgroundColor = [UIColor redColor];
         [self.navigationController pushViewController:vc animated:YES];
     }else {
         UIImage *image = [UIImage imageNamed:@"snow"];
         NSArray *images = @[image];
-        self.snowView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
-        self.snowView.viewController = self;
-        [self.navigationController.view addSubview:self.snowView];
-        self.snowView.scale = 0.2;
-        self.snowView.scaleRange = 0.2;
-        self.snowView.yAcceleration = 100;
-        self.snowView.velocityArray = @[@50];
-        [self.snowView animationStart];
+        self.flakeView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
+        self.flakeView.viewController = self;
+        [self.navigationController.view addSubview:self.flakeView];
+        self.flakeView.scale = 0.2;
+        self.flakeView.scaleRange = 0.2;
+        self.flakeView.yAcceleration = 100;
+        self.flakeView.velocityArray = @[@50];
+        [self.flakeView animationStart];
         
     }
 }
