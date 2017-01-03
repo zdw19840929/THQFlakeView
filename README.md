@@ -25,17 +25,22 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 @property (nonatomic, strong) CLNNFlakeView *snowView;
 @end
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-        UIImage *image = [UIImage imageNamed:@"snow"];
-        NSArray *images = @[image];
-        self.flakeView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
-        self.flakeView.viewController = self;
-        [self.navigationController.view addSubview:self.flakeView];
-        self.flakeView.scale = 0.2;
-        self.flakeView.scaleRange = 0.2;
-        self.flakeView.yAcceleration = 100;
-        self.flakeView.velocityArray = @[@50];
-        [self.flakeView animationStart];
+- (void)flakeStart {    
+    UIImage *image = [UIImage imageNamed:@"snow"];
+    NSArray *images = @[image];
+    self.flakeView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:10 velocity:50 birthRate:10 completeBlock:^{
+        // 动画完成后执行这块代码
+        numbers++;
+        [defaults setObject:@(numbers) forKey:UserDefaultsFlakeViewId];
+        
+    }];
+    self.flakeView.viewController = self;
+    [self.navigationController.view addSubview:self.flakeView];
+    self.flakeView.scale = 0.2;
+    self.flakeView.scaleRange = 0.2;
+    self.flakeView.yAcceleration = 100;
+    self.flakeView.velocityArray = @[@50];
+    [self.flakeView animationStart];
 }
 ````
 

@@ -35,6 +35,14 @@ static const int NotUseTabBarController = 100;
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate completeBlock:(void (^)())block {
+    self = [self initWithFrame:frame images:images lastTime:seconds velocity:velocity birthRate:rate];
+    if (self) {
+        _completeBlock = [block copy];
+    }
+    return self;
+}
+
 #pragma mark Private
 - (THQFlakeStaticImageView *)flakeStaticImageView {
     THQFlakeStaticImageView *flakeStaticImageView = [[THQFlakeStaticImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
@@ -154,6 +162,10 @@ static const int NotUseTabBarController = 100;
     [super animationStop];
     [self.currentAnimationView animationStop];
     self.timeup = YES;
+    
+    if (self.completeBlock) {
+        self.completeBlock();
+    }
     
     CGRect bounds = self.bounds;
     CGFloat height = bounds.size.height + 50;
