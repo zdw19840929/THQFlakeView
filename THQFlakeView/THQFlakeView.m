@@ -48,7 +48,6 @@ static const int NotUseTabBarController = 100;
     flakeStaticImageView.scaleRange = self.scaleRange;
     flakeStaticImageView.yAcceleration = self.yAcceleration;
     flakeStaticImageView.velocityArray = self.velocityArray;
-    [flakeStaticImageView animationStart];
     self.currentAnimationView = flakeStaticImageView;
     return flakeStaticImageView;
 }
@@ -60,7 +59,6 @@ static const int NotUseTabBarController = 100;
     flakeGifImageView.scale = self.scale;
     flakeGifImageView.scaleRange = self.scaleRange;
     flakeGifImageView.yAcceleration = self.yAcceleration;
-    [flakeGifImageView animationStart];
     self.currentAnimationView = flakeGifImageView;
     return flakeGifImageView;
 }
