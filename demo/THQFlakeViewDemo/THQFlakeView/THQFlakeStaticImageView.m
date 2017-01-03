@@ -51,7 +51,6 @@
     emitterCell.velocity = speed;//速度
     emitterCell.velocityRange = 10;//速度范围
     emitterCell.yAcceleration = self.yAcceleration / 10;//粒子y方向的加速度分量
-//    emitterCell.xAcceleration = 100;
     emitterCell.emissionLongitude = M_PI / 2; // upx-y平面的发射方向  ....>> emissionLatitude：发射的z轴方向的角度
     emitterCell.emissionRange = M_PI / 4; // 90 degree cone for variety周围发射角度
     emitterCell.spinRange = 0.5 * M_PI;		// slow spin子旋转角度范围
