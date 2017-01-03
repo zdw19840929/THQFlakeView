@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLNNFlakeImageView : UIView
+@interface THQFlakeImageView : UIView
 
 // 动画图片数组
 @property (nonatomic, copy) NSArray<UIImage *> *images;

@@ -1,5 +1,5 @@
 //
-//  CLNNFlakeGifImageView.h
+//  THQFlakeGifImageView.h
 //  GrainEffect
 //
 //  Created by 赵清 on 2016/12/9.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CLNNFlakeImageView.h"
+#import "THQFlakeImageView.h"
 
-@interface CLNNFlakeGifImageView : CLNNFlakeImageView
+@interface THQFlakeGifImageView : THQFlakeImageView
 
 @end

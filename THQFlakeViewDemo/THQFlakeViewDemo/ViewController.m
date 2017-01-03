@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "CLNNFlakeView.h"
+#import "THQFlakeView.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) UIImageView *backgroundImgView;
-@property (nonatomic, strong) CLNNFlakeView *snowView;
+@property (nonatomic, strong) THQFlakeView *snowView;
 @end
 
 @implementation ViewController
@@ -47,7 +47,7 @@
     }else {
         UIImage *image = [UIImage imageNamed:@"snow"];
         NSArray *images = @[image];
-        self.snowView = [[CLNNFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
+        self.snowView = [[THQFlakeView alloc] initWithFrame:self.view.bounds images:images lastTime:90 velocity:700 birthRate:10];
         self.snowView.viewController = self;
         [self.navigationController.view addSubview:self.snowView];
         self.snowView.scale = 0.2;

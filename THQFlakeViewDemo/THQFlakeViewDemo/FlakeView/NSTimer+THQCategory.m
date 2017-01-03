@@ -1,16 +1,16 @@
 //
-//  NSTimer+CLNNCategory.m
+//  NSTimer+THQCategory.m
 //  GrainEffect
 //
 //  Created by 赵清 on 2016/12/9.
 //  Copyright © 2016年 zhouen. All rights reserved.
 //
 
-#import "NSTimer+CLNNCategory.h"
+#import "NSTimer+THQCategory.h"
 
-@implementation NSTimer (CLNNCategory)
+@implementation NSTimer (THQCategory)
 
-+ (NSTimer *)cl_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
++ (NSTimer *)thq_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                          block:(void (^)())block
                                        repeats:(BOOL)repeats
 {

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 zhouen. All rights reserved.
 //
 
-#import "CLNNFlakeImageView.h"
+#import "THQFlakeImageView.h"
 
-@implementation CLNNFlakeImageView
+@implementation THQFlakeImageView
 
 - (instancetype)init {
     self = [self initWithFrame:CGRectZero];;

@@ -1,19 +1,19 @@
 //
-//  CLNNFlakeStaticImageView.m
+//  THQFlakeStaticImageView.m
 //  GrainEffect
 //
 //  Created by 赵清 on 2016/12/7.
 //  Copyright © 2016年 zhouen. All rights reserved.
 //
 
-#import "CLNNFlakeStaticImageView.h"
+#import "THQFlakeStaticImageView.h"
 
-@interface CLNNFlakeStaticImageView ()
+@interface THQFlakeStaticImageView ()
 @property (nonatomic, strong) CAEmitterLayer *emitterLayer;
 @property (nonatomic, copy) NSArray *emitterCells;
 @end
 
-@implementation CLNNFlakeStaticImageView
+@implementation THQFlakeStaticImageView
 
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate{
     self = [super initWithFrame:frame images:images lastTime:seconds velocity:velocity birthRate:rate];

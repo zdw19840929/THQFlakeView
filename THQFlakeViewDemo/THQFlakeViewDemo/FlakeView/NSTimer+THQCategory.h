@@ -1,5 +1,5 @@
 //
-//  NSTimer+CLNNCategory.h
+//  NSTimer+THQCategory.h
 //  GrainEffect
 //
 //  Created by 赵清 on 2016/12/9.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (CLNNCategory)
+@interface NSTimer (THQCategory)
 
-+ (NSTimer *)cl_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
++ (NSTimer *)thq_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                          block:(void (^)())block
                                        repeats:(BOOL)repeats;
 

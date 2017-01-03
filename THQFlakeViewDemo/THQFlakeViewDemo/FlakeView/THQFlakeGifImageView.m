@@ -1,26 +1,26 @@
 //
-//  CLNNFlakeGifImageView.m
+//  THQFlakeGifImageView.m
 //  GrainEffect
 //
 //  Created by 赵清 on 2016/12/9.
 //  Copyright © 2016年 zhouen. All rights reserved.
 //
 
-#import "CLNNFlakeGifImageView.h"
-#import "NSTimer+CLNNCategory.h"
+#import "THQFlakeGifImageView.h"
+#import "NSTimer+THQCategory.h"
 
-@interface CLNNFlakeGifImageView ()
+@interface THQFlakeGifImageView ()
 
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
 
-@implementation CLNNFlakeGifImageView
+@implementation THQFlakeGifImageView
 
 - (void)animationStart {
     [super animationStart];
     
-    self.timer = [NSTimer cl_scheduledTimerWithTimeInterval:1.0/self.birthRate block:^{
+    self.timer = [NSTimer thq_scheduledTimerWithTimeInterval:1.0/self.birthRate block:^{
         [self setNeedsDisplay];
     } repeats:YES];
     [self.timer fire];

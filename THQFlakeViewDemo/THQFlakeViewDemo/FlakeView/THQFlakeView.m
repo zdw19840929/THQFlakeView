@@ -6,13 +6,13 @@
 //  Copyright © 2016年 zhouen. All rights reserved.
 //
 static const int NotUseTabBarController = 100;
-#import "CLNNFlakeView.h"
-#import "CLNNFlakeGifImageView.h"
-#import "CLNNFlakeStaticImageView.h"
+#import "THQFlakeView.h"
+#import "THQFlakeGifImageView.h"
+#import "THQFlakeStaticImageView.h"
 
-@interface CLNNFlakeView ()
+@interface THQFlakeView ()
 
-@property (nonatomic, strong) CLNNFlakeImageView *currentAnimationView;
+@property (nonatomic, strong) THQFlakeImageView *currentAnimationView;
 
 // 雪花持续时间到
 @property (nonatomic, getter=isTimeup) BOOL timeup;
@@ -25,7 +25,7 @@ static const int NotUseTabBarController = 100;
 
 @end
 
-@implementation CLNNFlakeView
+@implementation THQFlakeView
 
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images lastTime:(CGFloat)seconds velocity:(CGFloat)velocity birthRate:(float)rate {
     self = [super initWithFrame:frame images:images lastTime:seconds velocity:velocity birthRate:rate];
@@ -36,10 +36,10 @@ static const int NotUseTabBarController = 100;
 }
 
 #pragma mark Private
-- (CLNNFlakeStaticImageView *)flakeStaticImageView {
-    CLNNFlakeStaticImageView *flakeStaticImageView = [[CLNNFlakeStaticImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
+- (THQFlakeStaticImageView *)flakeStaticImageView {
+    THQFlakeStaticImageView *flakeStaticImageView = [[THQFlakeStaticImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
     for (UIView *view in self.subviews) {
-        if ([view isKindOfClass:[CLNNFlakeStaticImageView class]]) {
+        if ([view isKindOfClass:[THQFlakeStaticImageView class]]) {
             [view removeFromSuperview];
         }
     }
@@ -53,8 +53,8 @@ static const int NotUseTabBarController = 100;
     return flakeStaticImageView;
 }
 
-- (CLNNFlakeGifImageView *)flakeGifImageView {
-    CLNNFlakeGifImageView *flakeGifImageView = [[CLNNFlakeGifImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
+- (THQFlakeGifImageView *)flakeGifImageView {
+    THQFlakeGifImageView *flakeGifImageView = [[THQFlakeGifImageView alloc] initWithFrame:self.bounds images:self.images lastTime:self.lastTime velocity:self.velocity birthRate:self.birthRate];
     flakeGifImageView.backgroundColor = [UIColor clearColor];
     [self addSubview:flakeGifImageView];
     flakeGifImageView.scale = self.scale;
@@ -187,7 +187,7 @@ static const int NotUseTabBarController = 100;
 
 - (void)showFlakeView {
     if (self.superview && !self.isTimeup) {
-        if (self.shouldOverspread && [self.currentAnimationView isKindOfClass:[CLNNFlakeStaticImageView class]]) {
+        if (self.shouldOverspread && [self.currentAnimationView isKindOfClass:[THQFlakeStaticImageView class]]) {
             // 切换tab或者home 再切换回来后为了让雪花铺满整屏，强制重新创建flakeStaticImageView，并且调用showFlakeView而不是animationStart方法
             if (self.currentAnimationView && self.currentAnimationView.superview) {
                 [self.currentAnimationView removeFromSuperview];
