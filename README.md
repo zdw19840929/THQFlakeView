@@ -14,7 +14,7 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 
 ![切换tab](../ImageResource/THQFlakeView_resource/切换tab.gif)
 
-![home回来](./resource/home回来.gif)
+![home回来](../ImageResource/THQFlakeView_resource/home回来.gif)
 
 ### 使用
 

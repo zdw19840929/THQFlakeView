@@ -45,7 +45,7 @@
 }
 ````
 
-![效果图](./第一个.gif)
+![效果图](../../ImageResource/THQFlakeView_resource/第一个.gif)
 
 
 
@@ -188,7 +188,7 @@ self.birthRate为每秒产生雪花个数，这样实际数目不会有太大差
 
 解决第一个坑:让雪花从头开始飘落并且保证数目正确。运行起来看：
 
-![second](./second.gif)
+![second](../../ImageResource/THQFlakeView_resource/second.gif)
 
 
 
