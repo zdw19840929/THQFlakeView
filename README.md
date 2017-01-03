@@ -10,7 +10,7 @@
 
 FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[FlakeView踩过的坑](./resource/FlakeView踩过的坑.md)
 
-效果图:图太大单独放到了另一个md文件[demo效果](./resource/FlakeView踩过的坑.md)，可直接下载demo运行看效果
+效果图:图太大单独放到了另一个md文件[demo效果](./resource/完成后效果.md)，可直接下载demo运行看效果
 
 ### 使用
 
