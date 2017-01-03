@@ -10,11 +10,7 @@
 
 FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[FlakeView踩过的坑](./resource/FlakeView踩过的坑.md)
 
-效果图:
-
-![切换tab](../ImageResource/THQFlakeView_resource/切换tab.gif)
-
-![home回来](../ImageResource/THQFlakeView_resource/home回来.gif)
+效果图:图太大单独放到了另一个md文件中，可直接下载demo运行看效果
 
 ### 使用
 
