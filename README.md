@@ -22,7 +22,7 @@ FlakeView针对这几个坑，做了封装（暂时不支持GIF）。详见[Flak
 
 ````
 @interface ViewController ()
-@property (nonatomic, strong) CLNNFlakeView *snowView;
+@property (nonatomic, strong) CLNNFlakeView *flakeView;
 @end
 
 - (void)flakeStart {    
